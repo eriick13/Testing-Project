@@ -56,6 +56,7 @@ public class Zkousecka2 {
             }
         }
         System.out.println(max);
+        System.out.println("Faktoriál je: " + spocitejFaktorial(5));
         //System.out.println(poleCisel.get(1));
 
 //        Scanner input = new Scanner(System.in);
@@ -105,6 +106,16 @@ public class Zkousecka2 {
         int c;
         c = a * b;
         return c;
+    }
+    
+    public static int spocitejFaktorial(int number){
+        int faktorial = number;
+        if(number == 1) return faktorial = 1;
+        if(number < 1) throw new IndexOutOfBoundsException();
+        for(int i = (number -1); i > 1;i--){
+            faktorial = faktorial * i;
+        }        
+        return faktorial;        
     }
 
     public int getCislo() {
